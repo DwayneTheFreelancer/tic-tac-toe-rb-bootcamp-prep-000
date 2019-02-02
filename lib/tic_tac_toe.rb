@@ -97,7 +97,7 @@ def play(board)
   elsif draw?(board)
     puts "Draw!"
   else
-    return nil
+    puts "Cat's Game!"
   end
 end
 
