@@ -74,31 +74,19 @@ def play(board)
    end
 end
 
-# def play(board)
-#   until over?(board) 
-#       turn(board)
-
-#   end 
-#   if won?(board)
-#       winner(board) == "X" || winner(board) == "O" 
-#       puts "Congratulations #{winner(board)}!" 
-#   elsif draw?(board)
-#       puts "Cat's Game!" 
-#   end 
-# end
-
 def play(board)
-  until over?(board) == true || won?(board) != false
-    turn(board)
-  end
-  if winner(board)
-    puts "Congratulations!"
+  until over?(board) 
+      turn(board)
+
+  end 
+  if won?(board)
+      winner(board) == "X" || winner(board) == "O" 
+      puts "Congratulations #{winner(board)}!" 
   elsif draw?(board)
-    puts "Draw!"
-  else
-    puts "Cat's Game!"
-  end
+      puts "Cat's Game!" 
+  end 
 end
+
 
 def won?(board)
   WIN_COMBINATIONS.each {|win_combo|
